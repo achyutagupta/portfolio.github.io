@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/8610d00479.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="intro">
+      <h1 class="logoheader">
+        <span class="logo">My</span> <span class="logo">Portfolio</span>
+        <span class="logo">Website.</span>
+      </h1>
+    </div>
+    <script src="app.js"></script>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Works">Works</a></li>
+        <li><a href="#Contact">Contact Me</a></li>
+      </ul>
+    </nav>
+    <section id="Home">
+      <div class="pic"><img src="img/ME.jpg" /></div>
+      <div class="container">
+        <h1>HI There!!</h1>
+        <h3>I am <span>Achyuta Gupta.</span></h3>
+        <p id="aboutme">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+          quaerat necessitatibus, voluptatibus doloremque dolore tenetur
+          exercitationem ad harum quo ullam, ut cum fugit adipisci itaque autem
+          maxime facilis quibusdam odio non. Aliquid maiores, dolorem vitae
+          autem voluptate odit assumenda culpa labore architecto cumque
+          cupiditate saepe voluptas officiis ratione consequuntur similique.
+        </p>
+      </div>
+    </section>
+    <section id="About">
+      <h1>About Me</h1>
+      <div class="info">
+        <div class="pinfo">
+          <h2>Personal Info</h2>
+          <p>Name:<span> Achyuta Gupta</span></p>
+          <p>Mother's Name: <span>Aruna Gupta</span></p>
+          <p>Father's Name:<span> Pankaj Kumar</span></p>
+          <p>Age:<span> 19</span></p>
+          <p>Date Of Birth:<span> 23rd May 2005</span></p>
+          <p>Religion:<span> Hindu</span></p>
+          <p>Home Town:<span> Bareilly</span></p>
+          <p>State:<span> Uttar Pradesh</span></p>
+          <p>Country:<span> India</span></p>
+          <p>Phone No.:<span> 9897475067</span></p>
+          <p>Email-ID:<span> achyutagupta888rg@gmail.com</span></p>
+        </div>
+        <div class="pinfo2">
+          <h2>Educational Qualifications</h2>
+          <p>B.tech: <span> Civil Engineering (2021-Present)</span></p>
+          <p>
+            <span>Maulana Azad National Institute Of Technology,</span>Bhopal
+          </p>
+          <p>Intermediate: <span> P.C.M (2020)</span></p>
+          <p><span>Hartmann College,</span>Bareilly</p>
+          <p>High School: <span>(2018)</span></p>
+          <p><span>Girish Prasad Memorial College,</span>Bareilly</p>
+          <h2>Social Media</h2>
+          <p><i class="fa-brands fa-linkedin"></i><span> /achyutagupta</span></p>
+          <p><i class="fa-brands fa-square-github"></i><span> /achyutagupta</span></p>
+          <p><i class="fa-brands fa-square-instagram"></i><span> /achyutagupta</span></p>
+        </div>
+      </div>
+    </section>
+    <section id="Works">
+      <h1>My Works</h1>
+      <div class="wrapper">
+        <div class="flip-card">
+          <div class="front-card1"></div>
+          <div class="back-card">
+            <span class="home-logo">
+              <span class="icon"></span>
+            </span>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="front-card2"></div>
+          <div class="back-card">
+            <span class="home-logo">
+              <span class="icon"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="btnlinks">
+        <p class="link">
+          <a href="https://achyutagupta.github.io/caraiste.github.io/"
+            >Click to visit</a
+          >
+        </p>
+        <p class="link">
+          <a href="https://achyutagupta.github.io/ISTE-2.0.github.io/">Click to visit</a>
+        </p>
+      </div>
+    </section>
+    <section id="Contact">
+      <form
+        action="/myaction.php"
+        name="myform"
+        onsubmit="return validateForm()"
+        method="post"
+      >
+        <h1>Get in Touch</h1>
+        <div class="myform">
+          <span id="fn"
+            >First Name:
+            <input type="text" placeholder="First Name" name="fname"
+          /></span>
+          <span id="ln"
+            >Last Name:
+            <input type="text" placeholder="Last Name" name="flname"
+          /></span>
+          <span id="email"
+            >Email: <input type="text" placeholder="Email" name="femail"
+          /></span>
+          <span id="phone"
+            >Phone: <input type="text" placeholder="Phone" name="fphone"
+          /></span>
+          <span id="address"
+            >Address: <input type="text" placeholder="Address" name="faddress"
+          /></span>
+          <input
+            type="text"
+            id="message"
+            placeholder="Type Your Message Here"
+            name="fmessage"
+          />
+          <button id="btn">Submit</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
