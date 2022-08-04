@@ -116,39 +116,51 @@
     </section>
     <section id="Contact">
       <form
-        action="/myaction.php"
         name="myform"
-        onsubmit="return validateForm()"
-        method="post"
       >
         <h1>Get in Touch</h1>
         <div class="myform">
           <span id="fn"
             >First Name:
-            <input type="text" placeholder="First Name" name="fname"
+            <input type="text" placeholder="First Name" name="fname" id="ffname"
           /></span>
           <span id="ln"
             >Last Name:
-            <input type="text" placeholder="Last Name" name="flname"
+            <input type="text" placeholder="Last Name" name="flname" id="fflname"
           /></span>
           <span id="email"
-            >Email: <input type="text" placeholder="Email" name="femail"
+            >Email: <input type="text" placeholder="Email" name="femail" id="ffemail"
           /></span>
           <span id="phone"
-            >Phone: <input type="text" placeholder="Phone" name="fphone"
+            >Phone: <input type="text" placeholder="Phone" name="fphone" id="ffphone"
           /></span>
           <span id="address"
-            >Address: <input type="text" placeholder="Address" name="faddress"
+            >Address: <input type="text" placeholder="Address" name="faddress" id="ffaddress"
           /></span>
           <input
             type="text"
-            id="message"
+            id="ffmessage"
             placeholder="Type Your Message Here"
             name="fmessage"
           />
-          <button id="btn">Submit</button>
+          <input type="button" name="button" id="btn" value="Submit" onclick="AddRow()">
+          <!-- <button id="btn" onclick="AddRow()">Submit</button> -->
         </div>
       </form>
+      <table border="6" id="show">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>message</th>
+          </tr>
+        </thead>
+      </table>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

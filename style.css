@@ -1,300 +1,333 @@
-*{
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
+.intro {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  transition: 1s;
+}
+.logoheader {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fee715ff;
+}
+.logo {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+.logo.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+.logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+#navbar {
+  background-color: #161616;
+  padding-right: 20px;
+  height: 10vh;
+  box-shadow: 10px #101820ff;
+}
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#navbar ul li {
+  margin: 16px 24px;
+  padding: 2px 4px;
+  list-style-type: none;
+  border: 2px solid #fee715ff;
+  border-radius: 10px;
+}
+#navbar ul li a {
+  text-decoration: none;
+  font-size: 700;
+  color: #fee715ff;
+  font-family: "Prompt", sans-serif;
+}
+#navbar ul li:hover {
+  background-color: #fbe9e9;
+}
+#Home {
+  display: flex;
+  background-color: #fee715ff;
+  height: 90vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  padding: 40px;
+}
+.container h3 span {
+  font-size: 30px;
+}
+.pic {
+  width: 35%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pic img {
+  border: 15px solid #101820ff;
+  border-radius: 50%;
+  width: 80%;
+}
+#About {
+  background-color: #161616;
+  color: #fee715ff;
+  padding: 15px;
+}
+#About h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.pinfo {
+  padding: 0px 20px;
+  width: 50%;
+}
+.info span {
+  color: #ffffff;
+}
+.info h2 {
+  text-align: center;
+}
+.pinfo2 {
+  width: 50%;
+  padding: 0px 20px;
+  text-align: left;
+}
+#Works {
+  background-color: #fee715ff;
+}
+#Works h1 {
+  color: #101820ff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0px 40px;
+}
+.wrapper {
+  position: relative;
+  height: 330px;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .flip-card:nth-child(1) {
+  position: relative;
+  height: 100%;
+  width: 60%;
+  background-image: url(img/GitHub-logo.jpg);
+  background-size: cover;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  margin: 0px 20px;
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+}
+.wrapper .flip-card:nth-child(2) {
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+  position: relative;
+  height: 100%;
+  width: 60%;
+  background-image: url(img/GitHub-logo.jpg);
+  background-size: cover;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  margin: 0px 20px;
+}
+.wrapper .flip-card:nth-child(1):hover {
+  transform: rotateY(180deg);
+}
+.wrapper .flip-card:nth-child(2):hover {
+  transform: rotateY(180deg);
+}
+.flip-card .front-card1 {
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 99%;
+  width: 99%;
+  background-image: url(img/card1.png);
+  background-size: cover;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  position: absolute;
+}
+.flip-card .front-card2 {
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 99%;
+  width: 99%;
+  background-image: url(img/card2.png);
+  background-size: cover;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  position: absolute;
+}
+.back-card {
+  transform: rotateY(180deg);
+}
+.btnlinks {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.btnlinks p {
+  background-color: #161616;
+  border: 2px solid #ffffff;
+  height: 35px;
+  width: 120px;
+  border-radius: 15px;
+  align-items: center;
+}
+.btnlinks p a {
+  color: #fee715ff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0px 3px 0px 3px;
+}
+#Contact {
+  background-color: #161616;
+  width: 100%;
+  color: #fee715ff;
+  font-family: "Poppins", sans-serif;
+}
+#Contact h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 45px;
+}
+.myform {
+  display: grid;
+  font-size: 30px;
+  margin: 0% 5%;
+  grid-template-columns: auto auto;
+}
+.myform input {
+  outline: none;
+  border-radius: 5px;
+}
+.myform span input {
+  height: 25px;
+}
+.myform #ffmessage {
+  grid-area: 1/2/6/2;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.myform #btn {
+  grid-row: 6;
+  grid-column: 1 / span 2;
+  width: 10%;
+  margin: 1% 45%;
+  background-color: #fee715ff;
+  color: #161616;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+table {
+  text-align: center;
+  color: #fee715ff;
+  width: 100%;
+  border: none;
+  opacity: 0;
+}
+
+#show th,
+#show td {
+  padding: 13px;
+}
+@media (max-width: 550px) {
+  #navbar {
+    padding-right: 0px;
+  }
+  #navbar ul {
+    justify-content: space-between;
+    padding: 15px 5px 15px 5px;
+  }
+  #navbar ul li {
     margin: 0px;
     padding: 0px;
-    font-family: 'Poppins', sans-serif;
-}
-.intro{
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #161616;
-    transition: 1s;
-}
-.logoheader{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: #fee715ff;
-}
-.logo{
-    position: relative;
-    display: inline-block;
-    bottom: -20px;
-    opacity: 0;
-}
-.logo.active{
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-}
-.logo.fade{
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
-}
-#navbar{
-    background-color: #161616;
-    padding-right: 20px;
-    height: 10vh;
-    box-shadow: 10px #101820FF;
-}
-#navbar ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-#navbar ul li{
-    margin: 16px 24px;
-    padding: 2px 4px;
-    list-style-type: none;
-    border: 2px solid #FEE715FF;
-    border-radius: 10px;
-}
-#navbar ul li a{
-    text-decoration: none;
-    font-size: 700;
-    color: #FEE715FF;
-    font-family: 'Prompt', sans-serif;
-}
-#navbar ul li:hover{
-    background-color: #fbe9e9;
-}
-#Home{
-    display: flex;
-    background-color: #FEE715FF;
-    height: 90vh;
-}
-.container{
+  }
+  #Home {
+    display: block;
+  }
+  .container {
+    padding: 0px 20px;
+  }
+  .info {
+    display: block;
+  }
+  .myform {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 65%;
-    padding: 40px;
-}
-.container h3 span{
-    font-size: 30px;
-}
-.pic{
-    width: 35%;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.pic img{
-    border: 15px solid #101820FF;
-    border-radius: 50%;
-    width: 80%;
-}
-#About{
-    background-color: #161616;
-    color: #FEE715FF;
-    padding: 15px;
-}
-#About h1{
-    text-align: center;
-    font-weight: 700;
-    font-size: 50px;
-    font-family: 'Poppins', sans-serif;
-}
-.info{
-    display: flex;
-    justify-content: space-between;
+  }
+  .myform {
     font-size: 20px;
+  }
+  .myform #btn {
+    width: 40%;
+  }
+  .info {
+    font-size: 15px;
+  }
 }
-.pinfo{
-    padding: 0px 20px;
-    width: 50%;
-}
-.info span{
-    color: #ffffff;
-}
-.info h2{
-    text-align: center;
-}
-.pinfo2{
-    width: 50%;
-    padding: 0px 20px;
-    text-align: left;
-}
-#Works{
-    background-color: #FEE715FF;
-}
-#Works h1{
-    color: #101820FF;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 600;
-    margin: 0px 40px;
-}
-.wrapper{
-    position: relative;
-    height: 330px;
-    perspective: 1000px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.wrapper .flip-card:nth-child(1){
-    position: relative;
-    height: 100%;
-    width: 60%;
-    background-image: url(img/GitHub-logo.jpg);
-    background-size: cover;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    margin: 0px 20px;
-    border: 4px solid #ffffff;
-    border-radius: 10px;
-}
-.wrapper .flip-card:nth-child(2){
-    border: 4px solid #ffffff;
-    border-radius: 10px;
-    position: relative;
-    height: 100%;
-    width: 60%;
-    background-image: url(img/GitHub-logo.jpg);
-    background-size: cover;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    margin: 0px 20px;
-}
-.wrapper .flip-card:nth-child(1):hover{
-    transform: rotateY(180deg);
-}
-.wrapper .flip-card:nth-child(2):hover{
-    transform: rotateY(180deg);
-}
-.flip-card .front-card1{
-    border: 4px solid #ffffff;
-    border-radius: 10px;
+@media (max-width: 800px) {
+  #show tr {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  #show th,
+  #show td {
+    padding: 0px;
+  }
+  table {
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 99%;
-    width: 99%;
-    background-image: url(img/card1.png);
-    background-size: cover;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    backface-visibility: hidden;
-    position: absolute;
+  }
 }
-.flip-card .front-card2{
-    border: 4px solid #ffffff;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 99%;
-    width: 99%;
-    background-image: url(img/card2.png);
-    background-size: cover;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    backface-visibility: hidden;
-    position: absolute;
-}
-.back-card{
-    transform: rotateY(180deg);
-}
-.btnlinks{
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-}
-.btnlinks p{
-    background-color: #161616;
-    border: 2px solid #ffffff;
-    height: 35px;
-    width: 120px;
-    border-radius: 15px;
-    align-items: center;
-}
-.btnlinks p a{
-    color: #fee715ff;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-    margin: 0px 3px 0px 3px;
-}
-#Contact{
-    background-color: #161616;
-    width: 100%;
-    color: #fee715ff;
-    font-family: 'Poppins', sans-serif;
-}
-#Contact h1{
-    text-align: center;
-    font-weight: 700;
-    font-size: 45px;
-}
-.myform{
-    display: grid;
-    font-size: 30px;
-    margin: 0% 5%;
-    grid-template-columns: auto auto;
-}
-.myform input{
-    outline: none;
-    border-radius: 5px;
-}
-.myform span input{
-    height: 25px;
-}
-.myform #message{
-    grid-area: 1/2/6/2;
-    border-radius: 20px;
-    font-size: 20px;
-}
-.myform #btn{
-    grid-row: 6;
-    grid-column: 1/ span 2;
-    width: 10%;
-    margin: 1% 45%;
-    background-color: #fee715ff;
-    color: #161616;
-    height: 40px;
-    border-radius: 15px;
-    font-size: 20px;
-}
-@media (max-width:550px) {
-    #navbar{
-        padding-right: 0px;
+@media (max-width: 333px) {
+    #show tr {
+        font-size: 2vh;
     }
-    #navbar ul {
-        justify-content: space-between;
-        padding: 15px 5px 15px 5px;
-    }
-    #navbar ul li {
-        margin: 0px;
-        padding: 0px;
-    }
-        #Home{
-        display: block;
-        }
-        .container{
-            padding: 0px 20px;
-        }
-        .info{
-            display: block;
-        }
-        .myform{
-        display: flex;
-        flex-direction: column;
-        }
-        .myform{
-            font-size: 20px;
-        }
-        .myform #btn{
-            width: 40%;
-        }
-        .info {
-            font-size: 15px ;
-        }
 }
